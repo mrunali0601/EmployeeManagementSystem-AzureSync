@@ -51,6 +51,7 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2E8B429D5F50424EBB55D792606E9E59 }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_39336B9C44324347B4EA214E6F3E31B1 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_292B1F68835E417B8AF3089818C6C22C }}
@@ -62,4 +63,5 @@ jobs:
           app-name: 'EmployeeManagment'
           slot-name: 'Production'
           package: .
+
           
