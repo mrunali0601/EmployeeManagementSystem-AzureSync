@@ -21,7 +21,7 @@ jobs:
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '9.0'
+          dotnet-version: '3.1'
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
@@ -51,9 +51,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_FE4CDEE937804DC4A6608FC06B6A9DF8 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_D3B39633C6564650B887ED03F46E43E1 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_66D04D398BE645A0B3082D364799E439 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_AFA9F80C2C7049F49CA866B35DA596F2 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0ABA8471E3774FD5B7B41708DD26AA05 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C833EEDD6BD74EC1B5BBD68844926266 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -62,5 +62,4 @@ jobs:
           app-name: 'EmployeeManagment'
           slot-name: 'Production'
           package: .
-
           
