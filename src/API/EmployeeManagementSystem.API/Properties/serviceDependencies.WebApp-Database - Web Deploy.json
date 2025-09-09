@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('serviceConnectorResourceGroupName')]/providers/Microsoft.Web/sites/WebApp-Database/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsEmployeeManagementDbCon_B0E51B88E6",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/mylearning-databasetest/databases/DatabaseTets",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:EmployeeManagementDbConnString1",
+      "dynamicId": null
+    },
+    "apis1": {
+      "resourceId": null,
+      "type": "apis.azure"
+    }
+  }
+}
