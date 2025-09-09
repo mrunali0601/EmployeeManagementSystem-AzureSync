@@ -43,11 +43,11 @@ namespace EmployeeManagementSystem.API.Controllers
             var res=await _mediator.Send(new UpdateEmployeeCommad(empId, employeeDto));
             return Ok(res);
         }
-        //[HttpDelete("DeleteEmployee")]
-        //public async Task<IActionResult>DeleteEmployee(int empId)
-        //{
-        //    var res=await _mediator.Send(new DeleteEmployeeCommand(empId));
-        //    return Ok(res);
-        //}
+        [HttpDelete("DeleteEmployee")]
+        public async Task<IActionResult> DeleteEmployee(int empId)
+        {
+            var res = await _mediator.Send(new DeleteEmployeeCommand(empId));
+            return Ok(res);
+        }
     }
 }
